@@ -9,6 +9,6 @@ echo json_encode([
     'literal-ip' => ' : IPv4 publique = ' . $_SERVER['REMOTE_ADDR'],
     'literal-remote_port' => ' et <span class="'
         . ($isEphemeralPort ? 'texterouge' : 'textevert') . '">TCP '
-        . ($isEphemeralPort ? '' : $_SERVER['REMOTE_PORT'])
+        . $_SERVER['REMOTE_PORT']
         . '</span> (via IPv4 littérale)',
 ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
