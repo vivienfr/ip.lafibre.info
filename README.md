@@ -12,3 +12,4 @@ ipv6.lafibre.info => dossier ipv4v6.lafibre.info
 ipv4v6-c.lafibre.info => dossier ipv4v6.lafibre.info  
 ipv4-c.lafibre.info => dossier ipv4v6.lafibre.info  
 ipv6-c.lafibre.info => dossier ipv4v6.lafibre.info
+ipv4ok-ipv6hs.lafibre.info => dossier ipv4v6.lafibre.info
