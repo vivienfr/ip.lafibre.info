@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <title>Détecter le support WebGL</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" type="text/css" href="css/default.css" />
+</head>
+<body>
+  <p id="webGLResult">[ On affichera ici le résultat de la détection du support WebGL ]</p>
+  <button>Cliquez ici pour détecter WebGLRenderingContext</button>
+
+<script>
+window.addEventListener("load", function() { 
+  var paragraph = document.querySelector("#webGLResult"),
+    button = document.querySelector("button");
+  button.addEventListener("click", detectWebGLContext, false);
+  function detectWebGLContext () {
+    var canvas = document.createElement("canvas");
+    var gl = canvas.getContext("webgl") 
+      || canvas.getContext("experimental-webgl");
+    if (gl && gl instanceof WebGLRenderingContext) {
+      paragraph.innerHTML = 
+        "Félicitations, votre navigateur supporte WebGL.";
+    } else {
+      paragraph.innerHTML = "Échec du contexte WebGL. "
+        + "Votre navigateur peut ne pas supporter WebGL.";
+    }
+  }
+}, false);
+</script>
+
+</body>
+</html>
